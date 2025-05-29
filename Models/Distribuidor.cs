@@ -14,7 +14,7 @@ namespace T2_QUIROZ_MIGUEL.Models
         public int Telefono { get; set; }
         //AnioInicioOperacion debe tener un rango de 1900 a 3000
         [Required(ErrorMessage = "El Año de Inicio de Operacion es Obligatorio es obligatorio")]
-        [Range(1900, 3000, ErrorMessage = "El orden debe ser entre 1900 y 3000")]
+        [Range(1900, 3000, ErrorMessage = "El Año de Inicio debe ser entre 1900 y 3000")]
         public int AnioInicioOperacion { get; set; }
         [Required(ErrorMessage = "El contacto es obligatorio")]
         public string Contacto { get; set; }
