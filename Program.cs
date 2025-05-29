@@ -1,5 +1,11 @@
+using Microsoft.EntityFrameworkCore;
+using T2_QUIROZ_MIGUEL.Datos;
+
 var builder = WebApplication.CreateBuilder(args);
 
+
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
